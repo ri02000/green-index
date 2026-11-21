@@ -124,6 +124,37 @@ def fetch_one(row, robots):
         return {"code": code, "name": name, "result": "error_" + type(e).__name__, "candidates": []}
 
 
+
+def collect_category_page(url):
+    """Read a public, robots-allowed catalog category and collect code-bearing assets."""
+    try:
+        body, _, final = get_url(url)
+        if "maintenance.doterra.com" in body[:2000].lower():
+            return {"page": url, "result": "maintenance", "assets": [], "category_links": []}
+        parser = AssetParser()
+        parser.feed(body)
+        text = html.unescape(body).replace(r"\/", "/").replace(r"\u002F", "/")
+        raw = [(x, origin) for x, origin, _ in parser.assets]
+        raw.extend((m.group(0), "html-embedded") for m in IMAGE_URL.finditer(text))
+        found = {}
+        for asset, origin in raw:
+            u = normalize_asset(asset, final)
+            if not u or not CODES.search(u):
+                continue
+            found[u] = {"url": u, "discovery": "category:" + origin, "page": final}
+        links = []
+        for h in re.findall(r'<a\s[^>]*href\s*=\s*["\x27]([^"\x27]+)["\x27]', body, re.I):
+            u = urllib.parse.urljoin(final, html.unescape(h))
+            p = urllib.parse.urlparse(u)
+            if p.hostname == "www.doterra.com" and p.path.startswith("/KR/ko_KR/pl/"):
+                links.append(urllib.parse.urlunparse((p.scheme, p.netloc, p.path, "", "", "")))
+        return {"page": final, "result": "ok", "assets": list(found.values()), "category_links": sorted(set(links))}
+    except urllib.error.HTTPError as e:
+        return {"page": url, "result": "HTTP_" + str(e.code), "assets": [], "category_links": []}
+    except Exception as e:
+        return {"page": url, "result": type(e).__name__, "assets": [], "category_links": []}
+
+
 def main():
     with (ROOT / "products.csv").open(encoding="utf-8-sig", newline="") as f:
         products = list(csv.DictReader(f))
@@ -150,6 +181,26 @@ def main():
             records[key] = {"product_code": scan["code"], "name": scan["name"], "url": c["url"],
                             "confidence": c["confidence"], "origin": c["discovery"],
                             "source_page": scan.get("source_page", ""), "publication": "not_cleared"}
+    category_scans = []
+    if robots.get("www.doterra.com", (False, ""))[0]:
+        homepage = collect_category_page("https://www.doterra.com/KR/ko_KR/shop-home")
+        category_scans.append(homepage)
+        pages = sorted(set(homepage["category_links"] + [
+            "https://www.doterra.com/KR/ko_KR/pl/single-oils",
+            "https://www.doterra.com/KR/ko_KR/pl/blend-oils"
+        ]))[:70]
+        with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+            category_scans.extend(pool.map(collect_category_page, pages))
+        for listing in category_scans:
+            for candidate in listing["assets"]:
+                codes = CODES.findall(candidate["url"])
+                for code in set(codes) & product_codes:
+                    key = (code, candidate["url"])
+                    if key not in records:
+                        product = next(p for p in products if p["code"] == code)
+                        records[key] = {"product_code": code, "name": product["name"], "url": candidate["url"],
+                                        "confidence": "code_in_image_url", "origin": candidate["discovery"],
+                                        "source_page": listing["page"], "publication": "not_cleared"}
     rows = sorted(records.values(), key=lambda r: (r["product_code"], r["url"]))
     fields = ["product_code", "name", "url", "confidence", "origin", "source_page", "publication"]
     with (ROOT / "image_candidates.csv").open("w", encoding="utf-8-sig", newline="") as f:
@@ -165,6 +216,8 @@ def main():
               "products_with_official_image_url_candidates": len({r["product_code"] for r in rows}),
               "robots": {k: {"allowed": v[0], "reason": v[1]} for k, v in robots.items()},
               "discovery_result_counts": dict(Counter(r["result"] for r in scanned)),
+              "category_page_scan_count": len(category_scans),
+              "category_page_results": dict(Counter(s["result"] for s in category_scans)),
               "scans": scanned}
     (ROOT / "image_crawl_report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("Image candidate URLs:", len(rows), flush=True)
