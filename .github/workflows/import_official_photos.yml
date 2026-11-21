@@ -38,5 +38,7 @@ jobs:
           git add image_sources.csv image_pattern_probe.csv image_pattern_probe_report.json image_candidates.csv image_crawl_report.json official_image_probe.csv official_image_probe_report.json
           if ! git diff --cached --quiet; then
             git commit -m 'Record official image URL discovery results'
+            git fetch origin main
+            git rebase origin/main
             git push
           fi
