@@ -41,6 +41,8 @@ def robots_ok(host):
     try:
         body, status, final = get_url(url, 250000)
     except urllib.error.HTTPError as e:
+        if e.code == 404:
+            return True, "robots.txt absent (HTTP 404)"
         return False, "robots HTTP " + str(e.code)
     except Exception as e:
         return False, "robots unavailable: " + type(e).__name__
