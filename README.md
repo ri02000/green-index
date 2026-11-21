@@ -41,3 +41,10 @@
 - 제품번호로 연결되는 후보 주소 215개(등록 제품 108종 기준), 그중 사진이 없던 제품 49종은 실제 이미지 응답을 확인하여 외부 링크로 표시. 후보 숫자는 제품 사진 수가 아님.
 - 근거와 실패 사항: `image_crawl_report.json`, `official_image_probe.csv`, `official_image_probe_report.json`, `image_pattern_probe.csv`, `image_pattern_probe_report.json`.
 - 자동 수집은 GitHub Actions 워크플로 `.github/workflows/import_official_photos.yml`로 실행되며 실제 이미지 파일 대량 다운로드는 수행하지 않음.
+
+## 자동 이미지 수집 및 반영 (2026-11-21)
+- GitHub Actions `.github/workflows/import_official_photos.yml`이 매일 한국시간 오전 9시 15분경 실행되도록 예약됨. GitHub Actions의 실제 실행 시간은 지연될 수 있음.
+- 후보 이미지 탐색 → 이미지 응답 검사(제품당 최대 4개 후보) → `scripts/apply_verified_photos.py`로 검증된 제품번호 일치 공식 이미지 링크만 `products.csv`, `index.html`, `share.html`에 연결.
+- 적용 전후 사진 수량은 `photo_import_status.json`에 기록하고 제품 목록 JSON 및 JavaScript 구문 검사에 실패하면 게시하지 않음.
+- 자동 연결은 사진 HTTP 응답 확인에 한하며 현행 포장/이미지 게시 권한 확인을 대신하지 않음.
+- 이 작업은 **이미 등록된 제품의 사진만** 자동 보강한다. 한국 공식몰의 모든 판매 제품을 새로 등록하는 자동화는 아직 별도 구현이 필요함.
