@@ -1,10 +1,10 @@
 {
-  "checked_at_utc": "2026-11-21T13:50:51.103109+00:00",
+  "checked_at_utc": "2026-11-21T13:52:17.311565+00:00",
   "total_database_products": 135,
   "local_user_supplied_photo_count": 24,
   "photos_missing_locally": 111,
-  "first_party_image_url_candidates": 151,
-  "products_with_official_image_url_candidates": 85,
+  "first_party_image_url_candidates": 190,
+  "products_with_official_image_url_candidates": 108,
   "robots": {
     "shop.doterra.com": {
       "allowed": true,
@@ -16,9 +16,8 @@
     }
   },
   "discovery_result_counts": {
-    "error_IndexError": 37,
-    "discovered": 79,
-    "no_code_matching_image": 15,
+    "no_code_matching_image": 26,
+    "discovered": 105,
     "not_first_party": 4
   },
   "category_page_scan_count": 33,
@@ -30,8 +29,9 @@
     {
       "code": "60203170",
       "name": "도테라 스파 선물세트",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "no_code_matching_image",
+      "candidates": [],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/doterra-spa-gift-kit/"
     },
     {
       "code": "60200528",
@@ -97,26 +97,56 @@
     {
       "code": "60202957",
       "name": "모이스처라이징 배쓰 바 (3개)",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/personal-care-imagery/body-care-imagery/moisturizing_bath_bar_3pk_60202957_650wide_kr.png",
+          "discovery": "img:src",
+          "alt": "모이스처라이징 배쓰바",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/bath-bar-3pk/"
     },
     {
       "code": "60230116",
       "name": "바디워시 & 치약 칫솔 선물 세트",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/special-offer-imagery/thanksgiving-imagery/sep_thanks_60230116_bodywash-toothpaste-giftset.png",
+          "discovery": "img:src",
+          "alt": "바디 워시 & 치약 칫솔 선물 세트",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/bodywash-toothpaste-giftset/"
     },
     {
       "code": "60230115",
       "name": "배쓰바 & 치약 칫솔 선물 세트",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/special-offer-imagery/thanksgiving-imagery/sep_thanks_60230115_bathbar-toothpaste-giftset.png",
+          "discovery": "img:src",
+          "alt": "배쓰 바 & 치약 칫솔 선물 세트",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/bathbar-toothpaste-giftset/"
     },
     {
       "code": "60207889",
       "name": "하이드래이팅 뷰티풀 바디 미스트",
       "result": "discovered",
       "candidates": [
+        {
+          "url": "https://www.doterra.com/medias/625x325-60207889-spa-body-mist-kr-korean-web.jpg?context=bWFzdGVyfGltYWdlc3wzMDg2NXxpbWFnZS9qcGVnfGltYWdlcy9oOTcvaDliLzk5MTAxNTgwMzI5MjYuanBnfGY0ZWQzMmVkNjZiYjI4MTg5ZjA4MTUzNjJmOTM5YTAwNDRiMjYwYzYyMTRjNTQ3YzRhZWQzZjE2ZDMyOTVkYTE&pool=wave0",
+          "discovery": "og:image",
+          "alt": "",
+          "confidence": "code_in_image_url"
+        },
         {
           "url": "https://www.doterra.com/medias/2x3-600x900-60207889-spa-body-mist-kr-korean-web.jpg?context=bWFzdGVyfGltYWdlc3w5NDA5M3xpbWFnZS9qcGVnfGltYWdlcy9oNzIvaGEyLzk4OTExMzU5MTQwMTQuanBnfGMyZjRiYmYxMGY1MjAxZmYzMTFmODk3MThhMjgzOWU0YWI5ZWUxODU2NzE1ZDhiNjRiNzlhNzA4NTE5ODBhYTE",
           "discovery": "img:src",
@@ -344,14 +374,29 @@
     {
       "code": "60220993",
       "name": "세레니티",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "no_code_matching_image",
+      "candidates": [],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/serenity-oil/"
     },
     {
       "code": "60222501",
       "name": "슈퍼민트",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/blends-imagery/15ml_supermint_60222501_650tall_kr.png",
+          "discovery": "img:src",
+          "alt": "Supermint Oil",
+          "confidence": "code_in_image_url"
+        },
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/blends-imagery/15ml_supermint_60222501_650wide_horizontal_kr.png",
+          "discovery": "img:src",
+          "alt": "Supermint Oil",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/supermint-oil/"
     },
     {
       "code": "60227200",
@@ -376,8 +421,9 @@
     {
       "code": "60220991",
       "name": "시트러스 블리스",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "no_code_matching_image",
+      "candidates": [],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/citrus-bliss-oil/"
     },
     {
       "code": "31201309",
@@ -422,8 +468,22 @@
     {
       "code": "60210190",
       "name": "어댑티브",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/product-line-imagery/adaptiv-line-imagery/15ml_adaptive_60210190_650tall_kr.png",
+          "discovery": "img:src",
+          "alt": "Adaptiv Oil",
+          "confidence": "code_in_image_url"
+        },
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/product-line-imagery/adaptiv-line-imagery/15ml_adaptive_60210190_650wide_horizontal_kr.png",
+          "discovery": "img:src",
+          "alt": "Adaptiv Oil",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/adaptiv-oil/"
     },
     {
       "code": "60224997",
@@ -468,14 +528,29 @@
     {
       "code": "60200212",
       "name": "이지에어",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "no_code_matching_image",
+      "candidates": [],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/easy-air-oil/"
     },
     {
       "code": "31461409",
       "name": "젠도크린",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/blends-imagery/15ml_zendocrine_31461409_650tall_kr.png",
+          "discovery": "img:src",
+          "alt": "젠도크린",
+          "confidence": "code_in_image_url"
+        },
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/blends-imagery/15ml_zendocrine_31461409_650wide_horizontal_kr.png",
+          "discovery": "img:src",
+          "alt": "젠도크린",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/zendocrine-oil/"
     },
     {
       "code": "60227287",
@@ -507,8 +582,22 @@
     {
       "code": "31731309",
       "name": "콘솔",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/blends-imagery/5ml_console_31731309_650tall_kr.png",
+          "discovery": "img:src",
+          "alt": "콘솔",
+          "confidence": "code_in_image_url"
+        },
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/blends-imagery/5ml_console_31731309_650wide_horizontal_kr.png",
+          "discovery": "img:src",
+          "alt": "콘솔",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/doterra-console-oil/"
     },
     {
       "code": "60205350",
@@ -581,8 +670,16 @@
     {
       "code": "31751309",
       "name": "포기브",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/blends-imagery/5ml_forgive_31751309_650tall_kr.png",
+          "discovery": "img:src",
+          "alt": "",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/emotional-aromatherapy-system/"
     },
     {
       "code": "60228071",
@@ -627,8 +724,16 @@
     {
       "code": "31711309",
       "name": "피스 필",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/blends-imagery/5ml_peacefeel_31711309_650tall_kr.png",
+          "discovery": "img:src",
+          "alt": "",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/emotional-aromatherapy-system/"
     },
     {
       "code": "37411309",
@@ -653,14 +758,30 @@
     {
       "code": "37401309",
       "name": "버라지 살루벨 하이드래이팅 세럼",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/personal-care-imagery/verage-imagery/verage_serum_salubelle_37401309_650tall_kr.png",
+          "discovery": "img:src",
+          "alt": "버라지 살루벨 하이드래이팅 세럼",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/verage-salubelle-hydrating-serum/"
     },
     {
       "code": "42691309",
       "name": "버라지 스킨케어 콜렉션",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/personal-care-imagery/verage-imagery/verage_collection_42691309_650tall_kr.png",
+          "discovery": "img:src",
+          "alt": "버라지 스킨케어 콜렉션",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/verage-skin-care-collection-kit/"
     },
     {
       "code": "37381309",
@@ -806,20 +927,43 @@
     {
       "code": "60203557",
       "name": "포어리듀싱 토너",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/personal-care-imagery/essential-skin-care-imagery/pore_reducing_toner_60203557_650tall_kr.png",
+          "discovery": "img:src",
+          "alt": "포어 리듀싱 토너",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/essential-skin-care-pore-reducing-toner/"
     },
     {
       "code": "60203585",
       "name": "하이드레이팅 크림",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "no_code_matching_image",
+      "candidates": [],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/essential-skin-care-hydrating-cream/"
     },
     {
       "code": "60207784",
       "name": "그린만다린",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/single-oils-imagery/15ml_green_mandarin_60207784_650tall_kr.png",
+          "discovery": "img:src",
+          "alt": "그린만다린 오일",
+          "confidence": "code_in_image_url"
+        },
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/single-oils-imagery/15ml_green_mandarin_60207784_650wide_horizontal_kr.png",
+          "discovery": "img:src",
+          "alt": "그린만다린 오일",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/green-mandarin-oil/"
     },
     {
       "code": "30111409",
@@ -876,8 +1020,22 @@
     {
       "code": "30131409",
       "name": "레몬그라스",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/single-oils-imagery/15ml_lemongrass_30131409_650tall_kr.png",
+          "discovery": "img:src",
+          "alt": "레몬그라스 오일",
+          "confidence": "code_in_image_url"
+        },
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/single-oils-imagery/15ml_lemongrass_30131409_650wide_horizontal_kr.png",
+          "discovery": "img:src",
+          "alt": "레몬그라스 오일",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/create-account/lemongrass-oil/"
     },
     {
       "code": "30801409",
@@ -902,8 +1060,22 @@
     {
       "code": "30201409",
       "name": "로즈마리",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/single-oils-imagery/15ml_rosemary_30201409_650tall_kr.png",
+          "discovery": "img:src",
+          "alt": "로즈마리 오일",
+          "confidence": "code_in_image_url"
+        },
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/single-oils-imagery/15ml_rosemary_30201409_650wide_horizontal_kr.png",
+          "discovery": "img:src",
+          "alt": "로즈마리 오일",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/create-account/rosemary-oil/"
     },
     {
       "code": "30091409",
@@ -1169,14 +1341,42 @@
     {
       "code": "49361309",
       "name": "아버비테",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/single-oils-imagery/5ml_arborvitae_49361309_650tall_kr.png",
+          "discovery": "img:src",
+          "alt": "아버비테",
+          "confidence": "code_in_image_url"
+        },
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/single-oils-imagery/5ml_arborvitae_49361309_650wide_horizontal_kr.png",
+          "discovery": "img:src",
+          "alt": "아버비테",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/arborvitae-oil/"
     },
     {
       "code": "30181409",
       "name": "오레가노",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/single-oils-imagery/15ml_oregano_30181409_650tall_kr.png",
+          "discovery": "img:src",
+          "alt": "오레가노 오일",
+          "confidence": "code_in_image_url"
+        },
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/single-oils-imagery/15ml_oregano_30181409_650wide_horizontal_kr.png",
+          "discovery": "img:src",
+          "alt": "오레가노 오일",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/oregano-oil/"
     },
     {
       "code": "30171409",
@@ -1261,8 +1461,22 @@
     {
       "code": "30101409",
       "name": "자몽",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/single-oils-imagery/15ml_grapefruit_30101409_650tall_kr.png",
+          "discovery": "img:src",
+          "alt": "자몽 오일",
+          "confidence": "code_in_image_url"
+        },
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/single-oils-imagery/15ml_grapefruit_30101409_650wide_horizontal_kr.png",
+          "discovery": "img:src",
+          "alt": "자몽 오일",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/grapefruit-oil/"
     },
     {
       "code": "49291409",
@@ -1314,8 +1528,22 @@
     {
       "code": "60206376",
       "name": "클래리 세이지",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/single-oils-imagery/15ml_clary_sage_60206376_650tall_kr.png",
+          "discovery": "img:src",
+          "alt": "클레리 세이지",
+          "confidence": "code_in_image_url"
+        },
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/single-oils-imagery/15ml_clary_sage_60206376_650wide_horizontal_kr.png",
+          "discovery": "img:src",
+          "alt": "클레리 세이지",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/clary-sage-oil/"
     },
     {
       "code": "60202028",
@@ -1441,8 +1669,22 @@
     {
       "code": "60208746",
       "name": "레스큐어",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/blends-imagery/10ml_kids_rescuer_60208746_650tall_kr.png",
+          "discovery": "img:src",
+          "alt": "레스큐어",
+          "confidence": "code_in_image_url"
+        },
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/blends-imagery/10ml_kids_rescuer_60208746_650wide_horizontal_kr.png",
+          "discovery": "img:src",
+          "alt": "레스큐어",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/rescuer-roll-on-oil/"
     },
     {
       "code": "60208748",
@@ -1467,14 +1709,42 @@
     {
       "code": "60208747",
       "name": "스테디",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/blends-imagery/10ml_kids_steady_60208747_650tall_kr.png",
+          "discovery": "img:src",
+          "alt": "스테디",
+          "confidence": "code_in_image_url"
+        },
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/blends-imagery/10ml_kids_steady_60208747_650wide_horizontal_kr.png",
+          "discovery": "img:src",
+          "alt": "스테디",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/steady-roll-on-oil/"
     },
     {
       "code": "60208745",
       "name": "스트롱거",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/blends-imagery/10ml_kids_stronger_60208745_650tall_kr.png",
+          "discovery": "img:src",
+          "alt": "스트롱거",
+          "confidence": "code_in_image_url"
+        },
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/blends-imagery/10ml_kids_stronger_60208745_650wide_horizontal_kr.png",
+          "discovery": "img:src",
+          "alt": "스트롱거",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/stronger-roll-on-oil/"
     },
     {
       "code": "60208741",
@@ -1499,8 +1769,16 @@
     {
       "code": "60208744",
       "name": "카머",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/blends-imagery/10ml_kids_calmer_60208744_650tall_kr.png",
+          "discovery": "img:src",
+          "alt": "",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/kids-collection/"
     },
     {
       "code": "60208743",
@@ -1553,8 +1831,9 @@
     {
       "code": "60201845",
       "name": "불가리안 멜리사 키트",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "no_code_matching_image",
+      "candidates": [],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/bulgarian-melissa-kit/"
     },
     {
       "code": "60200618",
@@ -1579,8 +1858,16 @@
     {
       "code": "21141309",
       "name": "이모셔널 아로마테라피 시스템",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/kits-collections-imagery/collections-imagery/emotional_aromatherapy_kit_21141309_650wide_kr.png",
+          "discovery": "img:src",
+          "alt": "이모셔널 아로마 테라피 시스템",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/emotional-aromatherapy-system/"
     },
     {
       "code": "60221854",
@@ -1625,8 +1912,9 @@
     {
       "code": "60215137",
       "name": "다이제스트젠 터치",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "no_code_matching_image",
+      "candidates": [],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/doterra-digestzen-touch-oil/"
     },
     {
       "code": "60202318",
@@ -1645,14 +1933,29 @@
     {
       "code": "60203993",
       "name": "로즈 터치",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/single-oils-imagery/10ml_rose_touch_60203993_650tall_kr.png",
+          "discovery": "img:src",
+          "alt": "로즈 터치",
+          "confidence": "code_in_image_url"
+        },
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/single-oils-imagery/10ml_rose_touch_60203993_650wide_horizontal_kr.png",
+          "discovery": "img:src",
+          "alt": "로즈 터치",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/rose-touch-blend-oil/"
     },
     {
       "code": "60225151",
       "name": "살루벨",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "no_code_matching_image",
+      "candidates": [],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/salubelle-roll-on-oil/"
     },
     {
       "code": "60202317",
@@ -1725,8 +2028,9 @@
     {
       "code": "60224989",
       "name": "인튠",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "no_code_matching_image",
+      "candidates": [],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/in-tune-oil/"
     },
     {
       "code": "60203994",
@@ -1751,8 +2055,9 @@
     {
       "code": "60200379",
       "name": "클래리캄",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "no_code_matching_image",
+      "candidates": [],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/clarycalm-oil-roll-on/"
     },
     {
       "code": "60215961",
@@ -1812,8 +2117,9 @@
     {
       "code": "60223648",
       "name": "호프 터치",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "no_code_matching_image",
+      "candidates": [],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/doterra-hope-touch-oil/"
     },
     {
       "code": "30191409",
@@ -1871,8 +2177,16 @@
     {
       "code": "60226434",
       "name": "버치",
-      "result": "error_IndexError",
-      "candidates": []
+      "result": "discovered",
+      "candidates": [
+        {
+          "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/special-offer-imagery/tall650_60226434_birch_ko_kr_web.png",
+          "discovery": "img:src",
+          "alt": "버치",
+          "confidence": "code_in_image_url"
+        }
+      ],
+      "source_page": "https://shop.doterra.com/KR/ko_KR/shop/birch/"
     }
   ]
 }
