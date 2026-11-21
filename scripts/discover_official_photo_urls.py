@@ -73,7 +73,10 @@ class AssetParser(HTMLParser):
 
 def normalize_asset(candidate, base):
     candidate = html.unescape(candidate).replace(r"\/", "/").replace(r"\u002F", "/")
-    candidate = candidate.strip().split()[0].strip(",")
+    chunks = candidate.strip().split()
+    if not chunks:
+        return ""
+    candidate = chunks[0].strip(",")
     try:
         url = urllib.parse.urljoin(base, candidate)
         p = urllib.parse.urlparse(url)
