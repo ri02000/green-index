@@ -88,7 +88,7 @@ def main():
         if local.is_file():
             p["image_path"] = "photos/" + p["code"] + ".webp"
             p["image_kind"] = "official_candidate_image"
-    with open(ROOT / "products.csv", encoding="utf-8", newline="w") as f:
+    with open(ROOT / "products.csv", "w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=list(product_rows[0].keys()))
         writer.writeheader()
         writer.writerows(product_rows)
