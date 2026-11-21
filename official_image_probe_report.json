@@ -1,0 +1,12 @@
+{
+  "checked_at_utc": "2026-11-21T13:48:59.719731+00:00",
+  "database_products": 135,
+  "user_uploaded_photos": 24,
+  "official_photo_products_probed": 67,
+  "readable_official_images": 3,
+  "results": {
+    "HTTP_400": 64,
+    "readable_image": 3
+  },
+  "note": "Readability does not imply rights to republish or confirm packaging currency."
+}
