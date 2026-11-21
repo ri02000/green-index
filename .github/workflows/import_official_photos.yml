@@ -1,11 +1,6 @@
 name: Import official product image candidates
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/import_official_photos.yml'
-      - 'scripts/import_official_photos.py'
-      - 'image_sources.csv'
 permissions:
   contents: write
 concurrency:
