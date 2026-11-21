@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'scripts/discover_official_photo_urls.py'
+      - 'scripts/probe_official_image_urls.py'
       - 'image_sources.csv'
       - 'products.csv'
       - '.github/workflows/import_official_photos.yml'
@@ -25,11 +26,13 @@ jobs:
           python-version: '3.12'
       - name: Scan product source pages and record image links
         run: python scripts/discover_official_photo_urls.py
+      - name: Test candidate image links
+        run: python scripts/probe_official_image_urls.py
       - name: Save source audit results
         run: |
           git config user.name 'green-index-bot'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add image_candidates.csv image_crawl_report.json
+          git add image_candidates.csv image_crawl_report.json official_image_probe.csv official_image_probe_report.json
           if ! git diff --cached --quiet; then
             git commit -m 'Record official image URL discovery results'
             git push
