@@ -77,7 +77,7 @@ def normalize_asset(candidate, base):
         p = urllib.parse.urlparse(url)
         if p.scheme != "https" or p.hostname not in ALLOWED or not re.search(r"\.(?:png|jpg|jpeg|webp)$", p.path, re.I):
             return ""
-        return urllib.parse.urlunparse((p.scheme, p.netloc, p.path, "", "", ""))
+        return urllib.parse.urlunparse((p.scheme, p.netloc, p.path, "", p.query, ""))
     except Exception:
         return ""
 
