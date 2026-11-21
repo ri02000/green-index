@@ -1,10 +1,13 @@
 name: Discover official product photo URLs
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '15 0 * * *' # 09:15 Asia/Seoul
   push:
     paths:
       - 'scripts/discover_official_photo_urls.py'
       - 'scripts/probe_official_image_urls.py'
+      - 'scripts/apply_verified_photos.py'
       - 'scripts/probe_cdn_patterns.py'
       - 'image_sources.csv'
       - 'products.csv'
@@ -31,11 +34,32 @@ jobs:
         run: python scripts/discover_official_photo_urls.py
       - name: Test candidate image links
         run: python scripts/probe_official_image_urls.py
+      - name: Apply verified official product photos to catalog and website
+        run: python scripts/apply_verified_photos.py
+      - name: Validate both embedded product catalogs and JavaScript
+        run: |
+          python - <<'PY'
+          import csv, json, re
+          from pathlib import Path
+          with open('products.csv',encoding='utf-8-sig',newline='') as f:
+              rows=list(csv.DictReader(f))
+          for page in ('index.html','share.html'):
+              html=Path(page).read_text(encoding='utf-8')
+              match=re.search(r'const DATA=(\[[\s\S]*?\]);\s*const byCode=',html)
+              if not match:
+                  raise SystemExit(page+': missing embedded data')
+              data=json.loads(match.group(1))
+              assert len(data)==len(rows),(page,len(data),len(rows))
+              assert [(p['code'],p['image_path']) for p in data]==[(p['code'],p['image_path']) for p in rows], page+': photo mismatch'
+              Path('/tmp/'+page+'.js').write_text(html.split('<script>',1)[1].split('</script>',1)[0],encoding='utf-8')
+          PY
+          node --check /tmp/index.html.js
+          node --check /tmp/share.html.js
       - name: Save source audit results
         run: |
           git config user.name 'green-index-bot'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add image_sources.csv image_pattern_probe.csv image_pattern_probe_report.json image_candidates.csv image_crawl_report.json official_image_probe.csv official_image_probe_report.json
+          git add image_sources.csv image_pattern_probe.csv image_pattern_probe_report.json image_candidates.csv image_crawl_report.json official_image_probe.csv official_image_probe_report.json photo_import_status.json products.csv index.html share.html
           if ! git diff --cached --quiet; then
             git commit -m 'Record official image URL discovery results'
             git fetch origin main
