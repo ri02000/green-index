@@ -1,9 +1,9 @@
 {
-  "checked_at_utc": "2026-11-21T13:46:07.811307+00:00",
+  "checked_at_utc": "2026-11-21T13:47:34.773550+00:00",
   "total_database_products": 135,
   "local_user_supplied_photo_count": 24,
   "photos_missing_locally": 111,
-  "first_party_image_url_candidates": 151,
+  "first_party_image_url_candidates": 152,
   "products_with_official_image_url_candidates": 85,
   "robots": {
     "shop.doterra.com": {
@@ -20,6 +20,11 @@
     "discovered": 79,
     "no_code_matching_image": 15,
     "not_first_party": 4
+  },
+  "category_page_scan_count": 33,
+  "category_page_results": {
+    "ok": 32,
+    "HTTP_404": 1
   },
   "scans": [
     {
@@ -564,6 +569,12 @@
       "name": "패스트탠스",
       "result": "discovered",
       "candidates": [
+        {
+          "url": "https://www.doterra.com/medias/625x325-15ml-60218832-pasttense-kr-korea-web.jpg",
+          "discovery": "og:image",
+          "alt": "",
+          "confidence": "code_in_image_url"
+        },
         {
           "url": "https://www.doterra.com/medias/2x3-566x819-15ml-60218832-pasttense-kr-korea-web.jpg",
           "discovery": "img:src",
