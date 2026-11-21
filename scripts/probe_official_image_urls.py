@@ -76,12 +76,30 @@ def main():
             continue
         if not re.search(r"(?<!\d)" + re.escape(code) + r"(?!\d)", row["url"]):
             continue
-        if code not in available or priority(row) > priority(available[code]):
-            available[code] = row
-    print("Probe image links for products without local photos:", len(available), flush=True)
-    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
-        results = list(pool.map(probe, available.values()))
-    results.sort(key=lambda x: x["product_code"])
+        available.setdefault(code, []).append(row)
+    # Try up to four distinct official URLs for each product so a failed
+    # preferred CDN path does not hide a working official product photo.
+    trials = []
+    for code, rows in available.items():
+        seen = set()
+        for row in sorted(rows, key=priority, reverse=True):
+            if row["url"] not in seen and len(seen) < 4:
+                trials.append(row)
+                seen.add(row["url"])
+    print("Probe official candidate URLs:", len(trials),
+          "across products:", len(available), flush=True)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
+        all_results = list(pool.map(probe, trials))
+    # Exactly one chosen probe per product, with a successful image preferred.
+    by_code = {}
+    for row in all_results:
+        code = row["product_code"]
+        if code not in by_code or (
+            row["result"] == "readable_image" and
+            by_code[code]["result"] != "readable_image"
+        ):
+            by_code[code] = row
+    results = sorted(by_code.values(), key=lambda x: x["product_code"])
     fields = ["product_code", "name", "url", "confidence", "origin", "source_page", "publication", "result", "status", "content_type", "size_header"]
     with (ROOT / "official_image_probe.csv").open("w", encoding="utf-8-sig", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
