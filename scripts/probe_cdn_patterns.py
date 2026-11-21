@@ -37,7 +37,7 @@ def predict(product):
     slug = slug.removeprefix("doterra-").replace("-", "_")
     if not re.fullmatch(r"[a-z0-9_]{3,80}", slug):
         return None
-    cat = "single-oils-imagery" if product["category"] == "싱글 오일" else "blend-oils-imagery"
+    cat = "single-oils-imagery" if product["category"] == "싱글 오일" else "blends-imagery"
     return BASE + cat + "/" + vol.group(1) + "ml_" + slug + "_" + code + "_650tall_kr.png"
 
 
