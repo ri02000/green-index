@@ -1,10 +1,10 @@
 {
-  "checked_at_utc": "2026-11-21T13:55:56.464262+00:00",
+  "checked_at_utc": "2026-11-21T13:59:05.977555+00:00",
   "total_database_products": 135,
   "local_user_supplied_photo_count": 24,
   "photos_missing_locally": 111,
-  "first_party_image_url_candidates": 215,
-  "products_with_official_image_url_candidates": 108,
+  "first_party_image_url_candidates": 214,
+  "products_with_official_image_url_candidates": 107,
   "robots": {
     "shop.doterra.com": {
       "allowed": true,
@@ -16,8 +16,8 @@
     }
   },
   "discovery_result_counts": {
-    "no_code_matching_image": 26,
-    "discovered": 105,
+    "no_code_matching_image": 27,
+    "discovered": 104,
     "not_first_party": 4
   },
   "category_page_scan_count": 33,
@@ -2014,15 +2014,8 @@
     {
       "code": "60202323",
       "name": "이지에어 터치",
-      "result": "discovered",
-      "candidates": [
-        {
-          "url": "https://www.doterra.com/medias/625x325-60202323-10ml-touch-easyair-kr-korean-web.jpg?context=bWFzdGVyfGltYWdlc3wzODQ1MnxpbWFnZS9qcGVnfGltYWdlcy9oZjcvaDY2Lzk5MTAwNTAwMjk1OTguanBnfGVmYWU0YWUzMGUzYWI5NDBkMTRkYmQ4ZDQzNjhiOWFjYmJmZDQ2YjliODEwYmMzYWQ0MDBkZmQ2MGFjNTU3OTU&pool=wave0",
-          "discovery": "og:image",
-          "alt": "",
-          "confidence": "code_in_image_url"
-        }
-      ],
+      "result": "no_code_matching_image",
+      "candidates": [],
       "source_page": "https://www.doterra.com/KR/ko_KR/p/easy-air-touch-oil"
     },
     {
