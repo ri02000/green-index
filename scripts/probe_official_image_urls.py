@@ -23,7 +23,7 @@ MAX_READ = 4096
 
 def priority(row):
     url = row["url"]
-    return (int("www.doterra.com/medias" in url),
+    return (int("prd-evo-content.doterra.com" in url),
             int("2x3" in url or "566x819" in url or "600x900" in url),
             int(row["origin"].startswith("img:src")),
             int("og:image" not in row["origin"]),
