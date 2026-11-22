@@ -1,9 +1,11 @@
 {
   "checked_at_utc": "2026-11-22T01:14:53.811494+00:00",
-  "registered_products": 135,
-  "photo_links_before": 73,
-  "photo_links_after": 73,
-  "photos_missing": 62,
+  "registered_products": 148,
+  "photo_links_before": 77,
+  "photo_links_after": 77,
+  "photos_missing": 71,
   "new_links": [],
-  "policy": "Only verified first-party Korea product-number image links; external display rights and current packaging require separate review."
+  "policy": "Only verified first-party Korea product-number image links; external display rights and current packaging require separate review.",
+  "catalog_updated_at_kr": "2026-11-22",
+  "note": "Catalog expanded by 13 officially listed Korean products. This is a manually validated catalog snapshot, not a new photo crawler run."
 }
