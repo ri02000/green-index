@@ -1,11 +1,25 @@
 {
-  "checked_at_utc": "2026-11-22T01:14:53.811494+00:00",
-  "registered_products": 148,
+  "checked_at_utc": "2026-11-22T04:36:00+00:00",
+  "registered_products": 154,
   "photo_links_before": 77,
-  "photo_links_after": 77,
-  "photos_missing": 71,
-  "new_links": [],
+  "photo_links_after": 80,
+  "photos_missing": 74,
+  "new_links": [
+    {
+      "code": "60227201",
+      "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/blends-imagery/15ml_onguard-protect_60227201_650tall_kr.png"
+    },
+    {
+      "code": "60201946",
+      "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/product-line-imagery/on-guard-imagery/on_guard_toothpaste_60201946_650tall_kr.png"
+    },
+    {
+      "code": "60228432",
+      "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/special-offer-imagery/original_60228432_wall-diffuser_ko_kr_web_tall-650.png"
+    }
+  ],
   "policy": "Only verified first-party Korea product-number image links; external display rights and current packaging require separate review.",
   "catalog_updated_at_kr": "2026-11-22",
-  "note": "Catalog expanded by 13 officially listed Korean products. This is a manually validated catalog snapshot, not a new photo crawler run."
+  "note": "Summary synchronized after manually verified Korean catalog additions. checked_at_utc is the previous automated scan timestamp; next automated run replaces scan results.",
+  "last_manual_update_date": "2026-11-22"
 }
