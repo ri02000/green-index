@@ -88,47 +88,71 @@ def normalize_asset(candidate, base):
 
 
 def fetch_one(row, robots):
+    """Search the CURRENT Korean shop page first, then the older Korean page.
+
+    Older www.doterra.com/KR/ko_KR/p/... pages commonly list discontinued
+    /medias/ images returning 404. Current shop pages carry new CDN files.
+    """
     code = row["code"].strip()
     name = row["name"].strip()
-    page = row.get("detail_source", "").strip()
-    if not page or not page.startswith("https://"):
-        return {"code": code, "name": name, "result": "no_product_page", "candidates": []}
-    host = urllib.parse.urlparse(page).hostname
-    if host not in ALLOWED:
-        return {"code": code, "name": name, "result": "not_first_party", "candidates": []}
-    if not robots.get(host, (False, ""))[0]:
-        return {"code": code, "name": name, "result": "robots_unavailable_or_disallowed", "candidates": []}
-    try:
-        content, status, final = get_url(page)
-        if "maintenance.doterra.com" in content[:2000].lower():
-            return {"code": code, "name": name, "result": "maintenance_page", "candidates": []}
-        parser = AssetParser()
-        parser.feed(content)
-        candidates = {}
-        for raw, source, alt in parser.assets:
-            u = normalize_asset(raw, final)
-            if u:
-                candidates[u] = {"url": u, "discovery": source, "alt": alt[:100]}
-        text = html.unescape(content).replace(r"\/", "/").replace(r"\u002F", "/")
-        for m in IMAGE_URL.finditer(text):
-            u = normalize_asset(m.group(0), final)
-            if u and u not in candidates:
-                candidates[u] = {"url": u, "discovery": "html-embedded", "alt": ""}
-        out = []
-        for c in candidates.values():
-            if CODES.search(c["url"]) and not re.search(r"(?<!\d)" + re.escape(code) + r"(?!\d)", c["url"]):
-                continue  # Different product code, never present as a candidate.
-            exact = bool(re.search(r"(?<!\d)" + re.escape(code) + r"(?!\d)", c["url"]))
-            if exact or (name.lower() in c["alt"].lower() and len(name) > 3):
-                c["confidence"] = "code_in_image_url" if exact else "name_in_image_alt_needs_review"
-                out.append(c)
-        return {"code": code, "name": name, "result": "discovered" if out else "no_code_matching_image", "candidates": out[:10], "source_page": final}
-    except urllib.error.HTTPError as e:
-        return {"code": code, "name": name, "result": "HTTP_" + str(e.code), "candidates": []}
-    except Exception as e:
-        return {"code": code, "name": name, "result": "error_" + type(e).__name__, "candidates": []}
-
-
+    original = row.get("detail_source", "").strip()
+    pages = []
+    parsed = urllib.parse.urlparse(original)
+    if parsed.hostname == "www.doterra.com" and parsed.path.startswith("/KR/ko_KR/p/"):
+        slug = parsed.path.rstrip("/").split("/")[-1]
+        pages.append("https://shop.doterra.com/KR/ko_KR/shop/" + slug + "/")
+    if original:
+        pages.append(original)
+    all_candidates = {}
+    sources = []
+    errors = []
+    for page in dict.fromkeys(pages):
+        p = urllib.parse.urlparse(page)
+        host = p.hostname
+        if p.scheme != "https" or host not in ALLOWED:
+            errors.append("not_first_party")
+            continue
+        if not robots.get(host, (False, ""))[0]:
+            errors.append("robots_unavailable_or_disallowed")
+            continue
+        try:
+            content, status, final = get_url(page)
+            if "maintenance.doterra.com" in content[:2000].lower():
+                errors.append("maintenance_page")
+                continue
+            parser = AssetParser()
+            parser.feed(content)
+            candidates = {}
+            for raw, source, alt in parser.assets:
+                u = normalize_asset(raw, final)
+                if u:
+                    candidates[u] = {"url": u, "discovery": source, "alt": alt[:100]}
+            txt = html.unescape(content).replace(r"\/", "/").replace(r"\u002F", "/")
+            for m in IMAGE_URL.finditer(txt):
+                u = normalize_asset(m.group(0), final)
+                if u and u not in candidates:
+                    candidates[u] = {"url": u, "discovery": "html-embedded", "alt": ""}
+            for candidate in candidates.values():
+                u = candidate["url"]
+                # Do not guess: an exact 8-digit code in the URL is required
+                # for automatic photo assignment. Other images only go to audit.
+                has_exact = bool(re.search(r"(?<!\d)" + re.escape(code) + r"(?!\d)", u))
+                if has_exact:
+                    candidate["confidence"] = "code_in_image_url"
+                    candidate["source_page"] = final
+                    all_candidates[u] = candidate
+            sources.append(final)
+        except urllib.error.HTTPError as e:
+            errors.append("HTTP_" + str(e.code))
+        except Exception as e:
+            errors.append("error_" + type(e).__name__)
+    results = list(all_candidates.values())
+    return {"code": code, "name": name,
+            "result": "discovered" if results else (
+                errors[-1] if errors else "no_code_matching_image"),
+            "candidates": results[:15],
+            "source_page": sources[0] if sources else original,
+            "pages_checked": pages, "errors": errors}
 
 def collect_category_page(url):
     """Read a public, robots-allowed catalog category and collect code-bearing assets."""
@@ -167,11 +191,14 @@ def main():
         seeds = list(csv.DictReader(f))
     product_codes = {p["code"] for p in products}
     hosts = {urllib.parse.urlparse(p["detail_source"]).hostname for p in products if p.get("detail_source")}
+    # Include official Korean shop for old product pages used as sources.
+    hosts.add("shop.doterra.com")
     robots = {host: robots_ok(host) for host in sorted(hosts & ALLOWED)}
     print("Robots access results:", robots, flush=True)
 
+    pending = [p for p in products if not p.get("image_path")]
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
-        scanned = list(pool.map(lambda p: fetch_one(p, robots), products))
+        scanned = list(pool.map(lambda p: fetch_one(p, robots), pending))
     records = {}
     for seed in seeds:
         code = seed["product_code"]
