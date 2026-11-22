@@ -1,0 +1,11 @@
+{
+  "checked_at_utc": "2026-11-22T00:40:32+00:00",
+  "total_products": 135,
+  "photo_linked": 73,
+  "photos_missing": 62,
+  "reasons": {
+    "no_code_matching_official_image": 24,
+    "candidate_unavailable_HTTP_404": 38
+  },
+  "note": "An HTTP 404 or absent image is not permission to guess a filename. Publication rights and packaging currency have not been verified."
+}
