@@ -8,6 +8,7 @@ on:
       - 'scripts/discover_official_photo_urls.py'
       - 'scripts/probe_official_image_urls.py'
       - 'scripts/apply_verified_photos.py'
+      - 'scripts/audit_missing_photos.py'
       - 'scripts/probe_cdn_patterns.py'
       - 'image_sources.csv'
       - 'products.csv'
@@ -36,6 +37,8 @@ jobs:
         run: python scripts/probe_official_image_urls.py
       - name: Apply verified official product photos to catalog and website
         run: python scripts/apply_verified_photos.py
+      - name: Record every missing photo and failure reason
+        run: python scripts/audit_missing_photos.py
       - name: Validate both embedded product catalogs and JavaScript
         run: |
           python - <<'PY'
@@ -59,7 +62,7 @@ jobs:
         run: |
           git config user.name 'green-index-bot'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add image_sources.csv image_pattern_probe.csv image_pattern_probe_report.json image_candidates.csv image_crawl_report.json official_image_probe.csv official_image_probe_report.json photo_import_status.json products.csv index.html share.html
+          git add image_sources.csv image_pattern_probe.csv image_pattern_probe_report.json image_candidates.csv image_crawl_report.json official_image_probe.csv official_image_probe_report.json photo_import_status.json missing_photo_audit.csv missing_photo_audit_report.json products.csv index.html share.html
           if git diff --cached --quiet; then
             echo "No recorded changes."
             echo "No changes to publish." >> "$GITHUB_STEP_SUMMARY"
