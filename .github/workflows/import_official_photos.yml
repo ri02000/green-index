@@ -3,16 +3,9 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '15 0 * * *' # 09:15 Asia/Seoul
-  push:
-    paths:
-      - 'scripts/discover_official_photo_urls.py'
-      - 'scripts/probe_official_image_urls.py'
-      - 'scripts/apply_verified_photos.py'
-      - 'scripts/audit_missing_photos.py'
-      - 'scripts/probe_cdn_patterns.py'
-      - 'image_sources.csv'
-      - 'products.csv'
-      - '.github/workflows/import_official_photos.yml'
+  # Run only on a completed daily snapshot or by manual request.
+  # Do not run on individual product CSV commits: HTML/CSV are updated
+  # sequentially and a mid-update snapshot is temporarily inconsistent.
 permissions:
   contents: write
 concurrency:
