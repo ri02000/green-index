@@ -1,7 +1,5 @@
 code,name,category,detail_source,status,candidate_count,probe_results
 "60203170","도테라 스파 선물세트","바디 · 생활","https://shop.doterra.com/KR/ko_KR/shop/doterra-spa-gift-kit/","no_candidate","",""
-"60200528","로즈 핸드 로션","바디 · 생활","https://www.doterra.com/KR/ko_KR/p/rose-hand-lotion","candidate_unavailable","2","HTTP_404"
-"60200953","리플레니싱 바디 버터","바디 · 생활","https://www.doterra.com/KR/ko_KR/p/replenishing-body-butter","candidate_unavailable","1","HTTP_404"
 "60200291","리프레싱 바디 워시","바디 · 생활","https://www.doterra.com/KR/ko_KR/p/body-wash","candidate_unavailable","2","HTTP_404"
 "60221955","모이스처라이징 배쓰 바 (1개)","바디 · 생활","https://www.doterra.com/KR/ko_KR/p/bath-bar","no_candidate","",""
 "60207889","하이드래이팅 뷰티풀 바디 미스트","바디 · 생활","https://www.doterra.com/KR/ko_KR/p/hydrating-body-mist","candidate_unavailable","2","HTTP_404"
@@ -13,7 +11,6 @@ code,name,category,detail_source,status,candidate_count,probe_results
 "60223832","페이스&바디 미네랄 썬스크린 스틱","바디 · 생활","https://media.doterra.com/kr/ko/pips/face-body-mineral-sunscreen-stick.pdf","no_candidate","",""
 "60228829","프랑킨센스 스틱","바디 · 생활","https://www.doterra.com/KR/ko_KR/p/frankincense-stick","no_candidate","",""
 "60200550","핸드 앤 바디로션","바디 · 생활","https://www.doterra.com/KR/ko_KR/p/doterra-spa-hand-and-body-lotion","candidate_unavailable","2","HTTP_404"
-"60215096","다이제스트젠","블렌드 오일","https://www.doterra.com/KR/ko_KR/p/digestzen-oil","no_candidate","",""
 "60220962","메타파워","블렌드 오일","https://www.doterra.com/KR/ko_KR/p/metapwr-oil","candidate_unavailable","2","HTTP_404"
 "60220997","모티베이트","블렌드 오일","https://www.doterra.com/KR/ko_KR/p/doterra-motivate-oil","no_candidate","",""
 "60220993","세레니티","블렌드 오일","https://shop.doterra.com/KR/ko_KR/shop/serenity-oil/","no_candidate","",""
