@@ -1,25 +1,29 @@
 {
   "checked_at_utc": "2026-11-22T04:36:00+00:00",
-  "registered_products": 154,
-  "photo_links_before": 77,
-  "photo_links_after": 80,
-  "photos_missing": 74,
+  "registered_products": 159,
+  "photo_links_before": 80,
+  "photo_links_after": 84,
+  "photos_missing": 75,
   "new_links": [
     {
-      "code": "60227201",
-      "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/blends-imagery/15ml_onguard-protect_60227201_650tall_kr.png"
+      "code": "60203662",
+      "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/product-line-imagery/zengest-imagery/pb_assist_3pk_60203662_650wide_kr.png"
     },
     {
-      "code": "60201946",
-      "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/product-line-imagery/on-guard-imagery/on_guard_toothpaste_60201946_650tall_kr.png"
+      "code": "60215198",
+      "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/product-line-imagery/zengest-imagery/60215198_zencomplex_ko_kr_web_evo-2.0.png"
     },
     {
-      "code": "60228432",
-      "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/special-offer-imagery/original_60228432_wall-diffuser_ko_kr_web_tall-650.png"
+      "code": "60208228",
+      "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/personal-care-imagery/body-care-imagery/baby_lotion_60208228_650tall_kr.png"
+    },
+    {
+      "code": "60208229",
+      "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/personal-care-imagery/body-care-imagery/baby_wash_60208229_650tall_kr.png"
     }
   ],
   "policy": "Only verified first-party Korea product-number image links; external display rights and current packaging require separate review.",
   "catalog_updated_at_kr": "2026-11-22",
-  "note": "Summary synchronized after manually verified Korean catalog additions. checked_at_utc is the previous automated scan timestamp; next automated run replaces scan results.",
+  "note": "Manual 2026-11-22 Korean official shop additions; checked_at_utc refers to preceding GitHub automated scan. Official labels and rights pending.",
   "last_manual_update_date": "2026-11-22"
 }
