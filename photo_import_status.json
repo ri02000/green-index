@@ -1,8 +1,8 @@
 {
   "checked_at_utc": "2026-11-23T01:21:50.657116+00:00",
-  "registered_products": 162,
-  "photo_links_before": 85,
-  "photo_links_after": 127,
+  "registered_products": 167,
+  "photo_links_before": 127,
+  "photo_links_after": 132,
   "photos_missing": 35,
   "new_links": [
     {
@@ -174,5 +174,35 @@
       "url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/kits-collections-imagery/collections-imagery/60232679_foundational-wellness-bundle_web_ko_kr_tall650.png"
     }
   ],
-  "policy": "Only verified first-party Korea product-number image links; external display rights and current packaging require separate review."
+  "policy": "Only verified first-party Korea product-number image links; external display rights and current packaging require separate review.",
+  "manual_additions_since_last_scan": [
+    {
+      "code": "60207025",
+      "name": "앵커",
+      "photo_url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/blends-imagery/5ml_yoga_anchor_60207025_650tall_kr.png"
+    },
+    {
+      "code": "60207024",
+      "name": "얼라인",
+      "photo_url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/blends-imagery/5ml_yoga_align_60207024_650tall_kr.png"
+    },
+    {
+      "code": "60207023",
+      "name": "어센드",
+      "photo_url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/blends-imagery/5ml_yoga_ascend_60207023_650tall_kr.png"
+    },
+    {
+      "code": "60227202",
+      "name": "레몬 디톡스",
+      "photo_url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/essential-oil-imagery/blends-imagery/15ml_lemon_detox_60227202_650tall_kr.png"
+    },
+    {
+      "code": "60205625",
+      "name": "인트로 키트",
+      "photo_url": "https://prd-evo-content.doterra.com/apac/korea/images/product-imagery/kits-collections-imagery/collections-imagery/intro_kit_60205625_650tall_kr.png"
+    }
+  ],
+  "catalog_updated_at_kr": "2026-11-23",
+  "last_manual_update_date": "2026-11-23",
+  "note": "Manual Korean product + photo addition 2026-11-23: catalog 162→167, photo links 127→132. checked_at_utc is previous automated scan timestamp; new_links in this report refer to that scan only; manual additions in separate field. Recheck current inventory and image usage rights."
 }
