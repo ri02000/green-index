@@ -1,11 +1,11 @@
 {
-  "checked_at_utc": "2026-11-23T01:21:50.579226+00:00",
-  "database_products": 162,
+  "checked_at_utc": "2026-11-23T20:08:57.636143+00:00",
+  "database_products": 167,
   "user_uploaded_photos": 24,
-  "official_photo_products_probed": 85,
-  "readable_official_images": 76,
+  "official_photo_products_probed": 43,
+  "readable_official_images": 34,
   "results": {
-    "readable_image": 76,
+    "readable_image": 34,
     "HTTP_404": 8,
     "HTTP_403": 1
   },

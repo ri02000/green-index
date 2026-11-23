@@ -1,9 +1,9 @@
 {
-  "checked_at_utc": "2026-11-23T01:21:26.422519+00:00",
-  "attempted": 20,
+  "checked_at_utc": "2026-11-23T20:08:34.801974+00:00",
+  "attempted": 23,
   "valid_official_pngs": 0,
   "results": {
-    "HTTP_403": 20
+    "HTTP_403": 23
   },
   "note": "Filename inference tested; a 200 PNG is not permission to republish or proof of current label."
 }
