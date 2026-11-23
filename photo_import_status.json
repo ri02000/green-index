@@ -2,8 +2,8 @@
   "checked_at_utc": "2026-11-22T04:36:00+00:00",
   "registered_products": 162,
   "photo_links_before": 80,
-  "photo_links_after": 84,
-  "photos_missing": 78,
+  "photo_links_after": 85,
+  "photos_missing": 77,
   "new_links": [
     {
       "code": "60203662",
@@ -24,6 +24,6 @@
   ],
   "policy": "Only verified first-party Korea product-number image links; external display rights and current packaging require separate review.",
   "catalog_updated_at_kr": "2026-11-23",
-  "note": "2026-11-23 manually added 3 Korean official shop products; no new images. checked_at_utc remains the last automated image scan time.",
+  "note": "2026-11-23 official Korean product page image linked for 60231530; official product photo visible and exact 8-digit code matches. External publication rights and current packaging not cleared; checked_at_utc is prior automated scan.",
   "last_manual_update_date": "2026-11-23"
 }
