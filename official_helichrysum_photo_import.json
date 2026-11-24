@@ -5,5 +5,7 @@
   "image_path": "photos/60228342.webp",
   "image_kind": "official_brochure_local",
   "user_uploaded_original": false,
-  "photos_linked": 166
+  "photos_linked": 166,
+  "cropped_to_product_only": true,
+  "brochure_footer_removed": true
 }
