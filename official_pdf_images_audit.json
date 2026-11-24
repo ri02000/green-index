@@ -1,0 +1,101 @@
+{
+  "page": 5,
+  "images": [
+    {
+      "xref": 284,
+      "smask": 2462,
+      "pixel_width": 546,
+      "pixel_height": 819,
+      "rel_rect": [
+        0.8303,
+        0.2671,
+        0.964,
+        0.7368
+      ]
+    },
+    {
+      "xref": 285,
+      "smask": 2463,
+      "pixel_width": 243,
+      "pixel_height": 733,
+      "rel_rect": [
+        0.3683,
+        0.2772,
+        0.4261,
+        0.685
+      ]
+    },
+    {
+      "xref": 286,
+      "smask": 0,
+      "pixel_width": 147,
+      "pixel_height": 111,
+      "rel_rect": [
+        0.4261,
+        0.3192,
+        0.4611,
+        0.3809
+      ]
+    },
+    {
+      "xref": 295,
+      "smask": 0,
+      "pixel_width": 5000,
+      "pixel_height": 2188,
+      "rel_rect": [
+        -0.0084,
+        -0.0197,
+        1.0084,
+        1.0224
+      ]
+    },
+    {
+      "xref": 311,
+      "smask": 1842,
+      "pixel_width": 418,
+      "pixel_height": 151,
+      "rel_rect": [
+        0.3433,
+        0.1837,
+        0.4534,
+        0.2768
+      ]
+    },
+    {
+      "xref": 311,
+      "smask": 1842,
+      "pixel_width": 418,
+      "pixel_height": 151,
+      "rel_rect": [
+        0.8433,
+        0.1837,
+        0.9534,
+        0.2768
+      ]
+    },
+    {
+      "xref": 311,
+      "smask": 1842,
+      "pixel_width": 418,
+      "pixel_height": 151,
+      "rel_rect": [
+        0.3433,
+        0.1837,
+        0.4534,
+        0.2768
+      ]
+    },
+    {
+      "xref": 311,
+      "smask": 1842,
+      "pixel_width": 418,
+      "pixel_height": 151,
+      "rel_rect": [
+        0.8433,
+        0.1837,
+        0.9534,
+        0.2768
+      ]
+    }
+  ]
+}
