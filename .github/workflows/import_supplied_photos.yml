@@ -1,0 +1,50 @@
+name: Apply 33 user-supplied product photos
+on:
+  push:
+    paths:
+      - 'photo_transfer/READY.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: green-index-user-photo-import
+  cancel-in-progress: false
+jobs:
+  photo-import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Import zip photos and synchronize catalogs
+        run: python scripts/import_supplied_photos.py
+      - name: Validate website JavaScript syntax
+        run: |
+          python - <<'PY'
+          import pathlib
+          for name in ('index.html','share.html'):
+              content=pathlib.Path(name).read_text(encoding='utf-8')
+              script=content.split('<script>',1)[1].split('</script>',1)[0]
+              pathlib.Path('/tmp/'+name+'.js').write_text(script,encoding='utf-8')
+          PY
+          node --check /tmp/index.html.js
+          node --check /tmp/share.html.js
+      - name: Commit new photos and site data
+        run: |
+          git config user.name 'green-index-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add photos/ products.csv index.html share.html photo_import_user_report.json
+          git rm -r -q photo_transfer
+          git add -u photo_transfer
+          git fetch origin main
+          if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
+            echo '::error::main changed while importing. No files were published.'
+            exit 1
+          fi
+          git commit -m 'Register 33 user-supplied product photos and synchronize catalog'
+          git push origin HEAD:main
+          echo '33 product photos published to GitHub and catalog updated.' >> "$GITHUB_STEP_SUMMARY"
