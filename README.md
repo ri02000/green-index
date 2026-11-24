@@ -5,8 +5,8 @@
 - 공개 웹사이트 목표 주소: https://ri02000.github.io/green-index/
 - `index.html`: 제품 검색 및 상세 보기 (모바일/데스크톱 반응형)
 - `share.html`: 선택 제품 안내 페이지 (제품번호를 URL 조각으로 전달)
-- `products.csv`: 190개 제품 데이터 내보내기
-- 190개 제품에 1차 설명이 입력되어 있으며, 자료의 정확성·최신성에 대한 전체 검증은 아직 완료되지 않음.
+- `products.csv`: 195개 제품 데이터 내보내기
+- 195개 제품에 1차 설명이 입력되어 있으며, 자료의 정확성·최신성에 대한 전체 검증은 아직 완료되지 않음.
 - 전체 등록 제품의 선택과 맞춤 공유를 지원함. 공식 상세 정보 최종 검증이 끝나지 않은 제품은 공유 화면에 초안으로 표시함. 핵심 항목 공식 대조와 공유 기능 동작은 별도 상태.
 - 사진 표시 대상: 총 190개 제품 모두 사진 경로 연결. 2026-11-24 사용자 ZIP 제공 신규 24개 사진을 제품번호별로 추가하고, 기존 헬리크리섬 터치 사진은 교체하지 않음.
 - 사용자 제공 사진은 `photos/<제품번호>.webp`에 저장. 도테라 공식 외부 이미지 URL은 GitHub에 복제하지 않고 페이지에서 직접 표시하며, 정확한 SKU·공식 CDN 응답만 우선 사용한다. 이미지 게시 권한 및 현재 제품 포장 완전 검증은 별도.
@@ -150,3 +150,11 @@
 - 해당 공식 가격표 기준 확인된 신규 미등록 0개. 블렌드·싱글·방향용·롤온 카테고리는 임의로 병합하지 않는다.
 - 참고 공식 한국 쇼핑몰 현재 블렌드 카테고리 공개 1페이지의 12개 품목도 기존 상품명과 일치한다. 다른 페이지 및 사용자 화면 캡처 전수 확인과는 구별한다.
 - 출처: https://media.doterra.com/kr/ko/flyers/20251230_v69.2026.01_UO.pdf , https://www.doterra.com/KR/ko_KR/pl/proprietary-blends , https://shop.doterra.com/KR/ko_KR/shop/proprietary-blends/?API=1&ProductsOnly=1&Start=&nofooter=1&noheader=1&nometa=1
+
+## 2026-11-24 온가드 목록 검증 및 15mL 사진 정렬 개선
+- 스크린샷에 나온 온가드 제품에서 누락된 5개 SKU를 공식몰 제품 페이지 및 2026년 1월 공식 가격표로 확인한 뒤 별개 품목으로 추가: 온가드 포밍 핸드워시(38011309), 핸드워시 패키지(38021309), 온가드 핸드워시&디스펜서(38071309), 온가드 치약&칫솔 키트(20471409), 온가드 칫솔 (4개입)(50721309).
+- 총 제품 195종, 사진 링크 연결 195종, 누락 경로 0종. 제품번호 중복 없음. 공식 이미지 링크는 외부 원본을 직접 참조하며 재게시 허락·최신 포장 여부는 추후 확인.
+- 15mL 오일 병의 썸네일 여백 차이를 카드 화면에서 공통 높이 기준으로 보정. 로컬 원본의 픽셀 중 짙은 병 부분을 검출하여 표준 표시 높이에 맞추고 공식몰 외부 이미지는 동일 규칙의 높이를 적용. 5mL 및 10mL 롤온은 별도 기준. 사진 상세 원본 및 기존 파일은 보존.
+- 카드 사진 배경색을 흰색으로 통일하고 앞서 두 SKU에만 적용한 임시 배율 규칙을 제거. 사진 스캔이 불가능한 비정상 이미지에는 CSS 기본 크기가 적용된다.
+- 공식 출처: https://shop.doterra.com/KR/ko_KR/shop/on-guard-foaming-hand-wash/, https://shop.doterra.com/KR/ko_KR/shop/on-guard-foaming-hand-wash-2-pack/, https://shop.doterra.com/KR/ko_KR/shop/on-guard-foaming-hand-wash-with-two-dispensers/, https://shop.doterra.com/KR/ko_KR/shop/on-guard-toothpaste-and-brush-kit/, https://shop.doterra.com/KR/ko_KR/shop/on-guard-toothbrush-4pk/
+- 주의: 현행 쇼핑몰 전체 제품군에 대한 완전한 전수 조사나 최신 이미지의 모든 실물 포장 검증까지 마친 것은 아님.
