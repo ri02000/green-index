@@ -1,0 +1,40 @@
+name: Add Korean official Helichrysum Touch photo
+on:
+  push:
+    branches: [main]
+    paths: [scripts/official_helichrysum_touch_photo.py]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install PyMuPDF Pillow numpy requests
+      - run: python scripts/official_helichrysum_touch_photo.py
+      - name: Check both website scripts
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          for name in ('index.html','share.html'):
+              html=Path(name).read_text(encoding='utf-8')
+              Path('/tmp/'+name+'.js').write_text(html.split('<script>',1)[1].split('</script>',1)[0],encoding='utf-8')
+          PY
+          node --check /tmp/index.html.js
+          node --check /tmp/share.html.js
+      - name: Publish photo and data atomically
+        run: |
+          git config user.name green-index-bot
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add photos/60228342.webp products.csv index.html share.html README.md official_helichrysum_photo_import.json
+          git fetch origin main
+          if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
+            echo '::error::Concurrent changes detected';exit 1
+          fi
+          git commit -m 'Link official Korean 60228342 product image'
+          git push origin HEAD:main
