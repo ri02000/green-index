@@ -1,0 +1,27 @@
+name: Audit brochure image objects
+on:
+  push:
+    branches: [main]
+    paths: [scripts/audit_official_pdf_images.py]
+permissions:
+  contents: write
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install PyMuPDF requests
+      - run: python scripts/audit_official_pdf_images.py
+      - name: Save audit
+        run: |
+          git config user.name green-index-bot
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add official_pdf_images_audit.json
+          git fetch origin main
+          if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then exit 1; fi
+          git commit -m 'Record embedded official brochure image positions'
+          git push origin HEAD:main
