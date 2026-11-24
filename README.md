@@ -116,8 +116,19 @@
 
 ## 2026-11-24 한국 공식 자료 제품 가격 기록
 - 한국 공식 제품 리스트 v69.2026.01 및 한국 공식 개별 상품 페이지의 **제품번호**로 가격을 대조했다. 공식 카탈로그(2026년 1월판) 가격은 2026-11-24 실시간 쇼핑몰 가격을 보증하지 않는다.
-- 총 190개, 소비자가 기록 190개, 소비자가와 회원가 모두 표시 182개, 공식 가격 대조 183개. 나머지 7개는 기존 소비자가만 기록해 두었거나 회원가/현재가 추가 검증 필요.
+- 총 190개, 소비자가 기록 190개, 회원가 기록 190개. 190개 모두 한국 공식 제품 가격표 또는 개별 쇼핑몰 페이지에서 제품번호를 확인하고 가격을 대조했다.
 - 가격 출처: https://media.doterra.com/kr/ko/flyers/20251230_v69.2026.01_UO.pdf, https://shop.doterra.com/KR/ko_KR/shop/birch/, https://shop.doterra.com/KR/ko_KR/shop/doterra-oil-carrier/, https://www.doterra.com/KR/ko_KR/p/helichrysum-oil.
 - SKU 불일치·이름 변경이 있는 제품을 이름만 같다는 이유로 서로 덮어쓰지 않는다. `price_krw`는 소비자가(원), `member_price_krw`는 회원가(원). `price_source_url`, `price_checked_date`, `price_verification_status` 별도 열 추가.
 - 공식 자료와 기존 가격이 달라 갱신한 항목 1개: undefined[60231864]: 70000→64000.
 - 쇼핑몰이 점검 중일 경우 현재 실시간 가격 변동 및 재고는 확인되지 않을 수 있다.
+
+### 2026-11-24 개별 공식 쇼핑몰 추가 가격 확인 (8개)
+- 프랑킨센스 스틱 + 나이오 우드 [60228940]: 소비자가 100,000원, 회원가 75,000원 (https://shop.doterra.com/KR/ko_KR/shop/frankincense-plus-naio-wood-stick/)
+- 베스트 셀러 트리오 에어 디퓨저 키트 [60228067]: 소비자가 121,000원, 회원가 91,000원 (https://shop.doterra.com/KR/ko_KR/shop/best-seller-trio-air-diffuser-kit/)
+- 온가드 프로텍트 프리미엄 내추럴 치약 [60201946]: 소비자가 10,000원, 회원가 7,000원 (https://shop.doterra.com/KR/ko_KR/shop/on-guard-natural-toothpaste/)
+- 미스트 월 디퓨저 [60228432]: 소비자가 56,000원, 회원가 42,000원 (https://shop.doterra.com/KR/ko_KR/shop/myst-wall-plug-diffuser/)
+- 아로마 8종 5mL 키트 [60205876]: 소비자가 251,000원, 회원가 188,000원 (https://shop.doterra.com/KR/ko_KR/shop/aroma-8-essental-oils-5ml-kit/)
+- 카멜리아 씨드 [60231530]: 소비자가 31,000원, 회원가 23,000원 (https://shop.doterra.com/KR/ko_KR/shop/camellia-seed/)
+- 인트로 키트 [60205625]: 소비자가 41,000원, 회원가 31,000원 (https://shop.doterra.com/KR/ko_KR/shop/introductory-kit/)
+- 이지 캐리 오일 캐리어 [60227523]: 소비자가 27,000원, 회원가 27,000원 (https://shop.doterra.com/KR/ko_KR/shop/essential-oil-carrying-case/)
+- 결과: 총 190개 모두 소비자가·회원가 기록 완료. 다만 공식 가격표 v69.2026.01을 이용한 제품들은 **현재 2026-11-24 결제 단계의 실시간 가격**을 확인했다는 의미가 아니다. 판매·재고 상태도 미확인.
