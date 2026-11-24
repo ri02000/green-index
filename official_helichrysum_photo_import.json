@@ -7,5 +7,18 @@
   "user_uploaded_original": false,
   "photos_linked": 166,
   "cropped_to_product_only": true,
-  "brochure_footer_removed": true
+  "brochure_footer_removed": true,
+  "embedded_source_image_xref": 284,
+  "embedded_alpha_xref": 2462,
+  "precise_extraction": true,
+  "source_pixels": [
+    546,
+    819
+  ],
+  "alpha_bounds": [
+    198,
+    58,
+    350,
+    726
+  ]
 }
