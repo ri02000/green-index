@@ -113,3 +113,11 @@
 - 소스: 한국 공식 쇼핑몰 개별 상품 공개 페이지(있는 품목)와 https://media.doterra.com/kr/ko/flyers/20251230_v69.2026.01_UO.pdf .
 - 현행 재고·판매 여부, 사진 원본, 최신 가격·표시사항은 추가 검증 대상. 공식 카탈로그만 확인된 4개 품목은 현재 한국 쇼핑몰의 주문 가능 품목이라고 단정하지 않음.
 - `products.csv`, `index.html`, `share.html`의 같은 제품번호 순서와 정보 동기화. 사진 미확보는 명시적 빈 경로로 유지.
+
+## 2026-11-24 한국 공식 자료 제품 가격 기록
+- 한국 공식 제품 리스트 v69.2026.01 및 한국 공식 개별 상품 페이지의 **제품번호**로 가격을 대조했다. 공식 카탈로그(2026년 1월판) 가격은 2026-11-24 실시간 쇼핑몰 가격을 보증하지 않는다.
+- 총 190개, 소비자가 기록 190개, 소비자가와 회원가 모두 표시 182개, 공식 가격 대조 183개. 나머지 7개는 기존 소비자가만 기록해 두었거나 회원가/현재가 추가 검증 필요.
+- 가격 출처: https://media.doterra.com/kr/ko/flyers/20251230_v69.2026.01_UO.pdf, https://shop.doterra.com/KR/ko_KR/shop/birch/, https://shop.doterra.com/KR/ko_KR/shop/doterra-oil-carrier/, https://www.doterra.com/KR/ko_KR/p/helichrysum-oil.
+- SKU 불일치·이름 변경이 있는 제품을 이름만 같다는 이유로 서로 덮어쓰지 않는다. `price_krw`는 소비자가(원), `member_price_krw`는 회원가(원). `price_source_url`, `price_checked_date`, `price_verification_status` 별도 열 추가.
+- 공식 자료와 기존 가격이 달라 갱신한 항목 1개: undefined[60231864]: 70000→64000.
+- 쇼핑몰이 점검 중일 경우 현재 실시간 가격 변동 및 재고는 확인되지 않을 수 있다.
