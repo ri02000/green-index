@@ -1,0 +1,207 @@
+{
+  "source": "user provided archive with 33 product photos",
+  "registered_products": 166,
+  "imported_photos": 33,
+  "photos_linked": 165,
+  "photos_missing": 1,
+  "items": [
+    {
+      "code": "60200212",
+      "name": "이지에어",
+      "path": "photos/60200212.webp",
+      "sha256": "1e31e38aae9a36c35885a862ed04b422918615c527e55abc938b0cfb5b3d130d"
+    },
+    {
+      "code": "60200379",
+      "name": "클래리캄",
+      "path": "photos/60200379.webp",
+      "sha256": "cd27f5b6a23ea95b922befb4665479537e679a976e0cf7b3e4dae1ec4061c711"
+    },
+    {
+      "code": "60200550",
+      "name": "핸드&바디로션",
+      "path": "photos/60200550.webp",
+      "sha256": "9ed1f0a822abc3ab4e6765589e9dd4405027623423c8d04b2de2df415daf6d6c"
+    },
+    {
+      "code": "60203585",
+      "name": "하이드레이팅 크림",
+      "path": "photos/60203585.webp",
+      "sha256": "b15491d342ff542b51d10384b98011793cc81cadacb64998fab726b1d5d4f76a"
+    },
+    {
+      "code": "60204513",
+      "name": "헬리크리섬",
+      "path": "photos/60204513.webp",
+      "sha256": "515d3daf5e6a8ef82d208683fb0ab439a40555364df12ea4d9b8f144013c6db2"
+    },
+    {
+      "code": "60207889",
+      "name": "뷰티풀 바디미스트",
+      "path": "photos/60207889.webp",
+      "sha256": "a6298e63940ffbac43096bb7be9095f31ca0f1124862d3f199d6e25e9d8dbe0e"
+    },
+    {
+      "code": "60209969",
+      "name": "도테라 베이비 컬렉션",
+      "path": "photos/60209969.webp",
+      "sha256": "1178fa205d367dd8c1f9034faec73346afaf22510b84cb3546145f08ca3f3911"
+    },
+    {
+      "code": "60210902",
+      "name": "사이프레스",
+      "path": "photos/60210902.webp",
+      "sha256": "0a2c12c0166d17c1bcdc172f00ffadc730659c5a0a1e1008d0a0bcaf60ec8d62"
+    },
+    {
+      "code": "60215137",
+      "name": "다이제스트젠 터치",
+      "path": "photos/60215137.webp",
+      "sha256": "ca7d9e76762c34279694959d008d4e69cbecf7a80632575f2c5a75c3a37f4371"
+    },
+    {
+      "code": "60215960",
+      "name": "테라쉴드",
+      "path": "photos/60215960.webp",
+      "sha256": "b3df9145f59bf2f8e9e13e1f58edc77a8f697f77cb3c56fe280b4de4a98c70ae"
+    },
+    {
+      "code": "60216262",
+      "name": "진저",
+      "path": "photos/60216262.webp",
+      "sha256": "4e5fc277113c1e31a9725e52a3a408aedd6fbefd18565fe8a142a884974c27b5"
+    },
+    {
+      "code": "60218832",
+      "name": "패스트탠스",
+      "path": "photos/60218832.webp",
+      "sha256": "7f33369e634e3383ca76e657855dcb6e642affea9f84ab8d30c2a47a673add72"
+    },
+    {
+      "code": "60220991",
+      "name": "시트러스 블리스",
+      "path": "photos/60220991.webp",
+      "sha256": "c9ab4848afe8d5866668fbc8837edce1b043a6c389f4026ae448907e955f3f93"
+    },
+    {
+      "code": "60220993",
+      "name": "세레니티",
+      "path": "photos/60220993.webp",
+      "sha256": "d3e219abd21c40db337b61247e088edbe35ddbbbd5aea28dd8c65e54b40361f6"
+    },
+    {
+      "code": "60220995",
+      "name": "치어",
+      "path": "photos/60220995.webp",
+      "sha256": "cb6cfed170382043a4eef93de83c602551bf81a85ce3684dc9b8999e2bd66400"
+    },
+    {
+      "code": "60220997",
+      "name": "모티베이트",
+      "path": "photos/60220997.webp",
+      "sha256": "00231c230e33ea6d5643b7bfb4b443800a642b64bfd031485eececcc1635a58d"
+    },
+    {
+      "code": "60220999",
+      "name": "패션",
+      "path": "photos/60220999.webp",
+      "sha256": "2f632c7dfd74e95e69d7f51789e53e095338a7c3f7fdfa85640adc205d702132"
+    },
+    {
+      "code": "60221608",
+      "name": "도테라 화이트 에어 디퓨저",
+      "path": "photos/60221608.webp",
+      "sha256": "e65aca0466d3f544289972cde1ca7b32a513d9d83e9b225b1de33695411c682d"
+    },
+    {
+      "code": "60221955",
+      "name": "모이스처라이징 배쓰 바 (1개)",
+      "path": "photos/60221955.webp",
+      "sha256": "2d9184ebe5d801488258a594c640c0785a39a0228f1662de50745712f173cf66"
+    },
+    {
+      "code": "60223424",
+      "name": "이지에어 프라그란스 스틱",
+      "path": "photos/60223424.webp",
+      "sha256": "094fc99228a1ea645735b63c18293c6149846997acc927313f4ce521d28ad75d"
+    },
+    {
+      "code": "60223648",
+      "name": "호프 터치",
+      "path": "photos/60223648.webp",
+      "sha256": "0dc080ed41fdf1aba28a7232851413bddb7adfa815ac30de2b210f1c6ab3ea38"
+    },
+    {
+      "code": "60223832",
+      "name": "페이스&바디 미네랄 썬스크린 스틱",
+      "path": "photos/60223832.webp",
+      "sha256": "8b6f959ba4cf1774a70521fe3c79453b4cf618dfec82089b2efc9f7bc67b6ed0"
+    },
+    {
+      "code": "60224154",
+      "name": "수퍼쿨링 화이트 내추럴 치약",
+      "path": "photos/60224154.webp",
+      "sha256": "465b9775de1ae1cd217ad1f46b2c30e2c3ec5991edcec984b8eb3a9e7426e631"
+    },
+    {
+      "code": "60224989",
+      "name": "인툰",
+      "path": "photos/60224989.webp",
+      "sha256": "dc1ce5312cb18ff80edd35481533e73e71a57c49052e18664e2e20c884ce0597"
+    },
+    {
+      "code": "60225151",
+      "name": "살루벨",
+      "path": "photos/60225151.webp",
+      "sha256": "73bf5ba593d114c5768769620d6173d1c1dfea765c0f87cc1174e7187a25216a"
+    },
+    {
+      "code": "60225421",
+      "name": "알파 씨알에스 플러스",
+      "path": "photos/60225421.webp",
+      "sha256": "900bd9b377f48ab49f6c9307bca89570844a430dde2a7258f7e0637ec0d378c7"
+    },
+    {
+      "code": "60225932",
+      "name": "세레니티 스틱 + 발레리안",
+      "path": "photos/60225932.webp",
+      "sha256": "dce6d047edd6b1251d01bca008d191a7bc534e1768fe77eee9540559162e8934"
+    },
+    {
+      "code": "60226593",
+      "name": "페퍼민트 쿨링",
+      "path": "photos/60226593.webp",
+      "sha256": "f8569eca8f09cfdf36dc4a4e6cdb88532ed64e500808b7c83f2fe4f181e3114e"
+    },
+    {
+      "code": "60226596",
+      "name": "편한 숨 브래스",
+      "path": "photos/60226596.webp",
+      "sha256": "0e857f2bfd652ed6db6589fcae82af1e7c7b36d2eb09b879e3192249f4ed75cb"
+    },
+    {
+      "code": "60228067",
+      "name": "베스트 셀러 트리오 에어 디퓨저 키트",
+      "path": "photos/60228067.webp",
+      "sha256": "916d3c5b7dbcd315539c42623a1abb1f10b46c3cffb092651f693051dda7c89f"
+    },
+    {
+      "code": "60228071",
+      "name": "포레스트 배싱",
+      "path": "photos/60228071.webp",
+      "sha256": "7472ab080427fb48074312b38b9971f2e230fa40924d1a48f72f8371365ee73a"
+    },
+    {
+      "code": "60228940",
+      "name": "프랑킨센스 스틱 + 나이오 우드",
+      "path": "photos/60228940.webp",
+      "sha256": "97de7516e58afc64eaaeb8b4018c066aeb79e1dd1c28beb0a12a89e9804085c3"
+    },
+    {
+      "code": "60231864",
+      "name": "온가드 세탁세제",
+      "path": "photos/60231864.webp",
+      "sha256": "bc24baeff993ea3bfe63470c2cc2d534fd111e5e272f155a151199145444b46f"
+    }
+  ]
+}

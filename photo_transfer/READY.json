@@ -1,9 +1,0 @@
-{
-  "requested_at": "2026-11-24",
-  "expected_photos": 33,
-  "expected_registered_products": 166,
-  "archive_sha256": "22e15e33679fa3a2e3a03026167075404989ec9f3360f8261f16f8cda2ac71a1",
-  "note": "Unpack user supplied photos and synchronize catalog",
-  "retry": 1,
-  "reason": "fix cleanup step after successful image validations"
-}
