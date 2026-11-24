@@ -1,0 +1,27 @@
+name: Replace brochure crop with embedded official source photo
+on:
+  push:
+    branches: [main]
+    paths: [scripts/extract_embedded_helichrysum_image.py]
+permissions:
+  contents: write
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install PyMuPDF Pillow requests
+      - run: python scripts/extract_embedded_helichrysum_image.py
+      - name: Publish clean embedded photo
+        run: |
+          git config user.name green-index-bot
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add photos/60228342.webp official_helichrysum_photo_import.json
+          git fetch origin main
+          if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then exit 1; fi
+          git commit -m 'Use clean embedded official Korean Helichrysum Touch photo'
+          git push origin HEAD:main
